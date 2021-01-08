@@ -23,7 +23,6 @@ export class SearchComponent implements OnInit {
   }
 
   getResult(id) {
-    console.log(id);
     this.searchService.getResult(id)
     .subscribe(data => {
      this.results = data['results'];

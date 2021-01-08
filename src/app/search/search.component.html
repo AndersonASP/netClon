@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng>
   <div class="row" style="padding:20px">
     <div class="col-sm-4 poster" *ngFor="let result of results" [ngClass]="{'hide': result.poster_path == null}">
       <img src="https://image.tmdb.org/t/p/w500{{result.poster_path}}" class="img-fluid">
@@ -8,6 +8,9 @@
         <button class="btn btn-primary" *ngIf="result.media_type == 'movie'" [routerLink]="['/detailfilm', result.id]">Saber mais</button>
         <button class="btn btn-primary" *ngIf="result.media_type == 'tv'" [routerLink]="['/detailserie', result.id]">Saber mais</button>
       </div>
+    </div>
+    <div *ngIf="results">
+     <h1>Opps... Não encontramos dados para sua pesquisa!</h1>
     </div>
   </div>
 </div>
