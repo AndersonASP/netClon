@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row" style="margin-top:20px;">
+    <div class="col-sm-6">
+      <img class="img-fluid detail" src="https://image.tmdb.org/t/p/w500{{filme.poster_path}}">
+    </div>
+    <div class="col-sm-6 my-auto">
+      <h1>{{filme.title}}</h1>
+      <h6>Título original: {{filme.original_title}}</h6>
+      <h6><small>Duração: {{filme.runtime}} minutos</small></h6>
+      <span *ngFor="let genre of filme.genres" class="badge badge-genre">{{genre.name}}</span>
+      <p style="margin-top:20px;">{{filme.overview}}</p>
+    </div>
+  </div>
+</div>
